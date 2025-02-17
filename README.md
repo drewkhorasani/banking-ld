@@ -3,9 +3,9 @@
 # Install Python Dependencies
 Defined in requirements.txt.
 
-Example using pip and venv virtual environment on Windows:\
-`.venv/Scripts/activate`\
-`pip install -r requirements.txt`
+Example using pip and venv virtual environment on Windows:\  
+`.venv/Scripts/activate`\  
+`pip install -r requirements.txt`\  
 
 # LaunchDarkly setup
 
@@ -15,16 +15,16 @@ Example using pip and venv virtual environment on Windows:\
 
 ## Feature Flags
 1. Create two feature flags named 'missile' and 'worldDomination' (or modify main.py per your liking)
-2. 'worldDomination' flag is used for showing the ability to trigger a feature on/off remotely\
-    a. Create trigger per https://docsps.launchdarkly.com/home/releases/triggers\
-    b. Use curl to post to trigger specific on/off url with empty body `curl -X POST "https://app.launchdarkly.com/webhook/triggers/1234567890"`\
-    c. Default rule serves `Disabled`\
+2. 'worldDomination' flag is used for showing the ability to trigger a feature on/off remotely\  
+    a. Create trigger per https://docsps.launchdarkly.com/home/releases/triggers\  
+    b. Use curl to post to trigger specific on/off url with empty body `curl -X POST "https://app.launchdarkly.com/webhook/triggers/1234567890"`\  
+    c. Default rule serves `Disabled`\  
 3. 'missile' flag is used for individual and rule based targeting
-    a. Create one individual targeting rule looking for `user` is `superadmin`\
-    b. Create a custom rule with the following criteria:\
-        `If user country is one of United States`\
-        `And if user name is one of superadmin`\
-    b. Default rule serves `Disabled`\
+    a. Create one individual targeting rule looking for `user` is `superadmin`\  
+    b. Create a custom rule with the following criteria:\  
+        `If user country is one of United States`\  
+        `And if user name is one of superadmin`\  
+    b. Default rule serves `Disabled`\  
 
 # Run the Application
 1. Navigate to the root directory and run main.py `python main.py` 
