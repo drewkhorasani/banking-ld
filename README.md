@@ -1,6 +1,5 @@
 # banking-ld
 
-## Pre-requisites
 # Install Python Dependencies
 Defined in requirements.txt.
 
@@ -10,7 +9,7 @@ Example using pip and venv virtual environment on Windows:
 
 # LaunchDarkly setup
 
-##SDK key
+## SDK key
 1. Create SDK Key as explained here: https://docs.launchdarkly.com/home/account/environment/settings#copy-sdk-credentials-for-an-environment
 2. Set SDK key variable towards top of `main.py` or use environment variable LDKEY and uncomment line 10.
 
