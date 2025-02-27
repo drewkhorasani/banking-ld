@@ -6,6 +6,7 @@ Defined in requirements.txt.
 Example using pip and venv virtual environment on Windows:  
 `.venv/Scripts/activate`  
 `pip install -r requirements.txt`  
+> This isn't *nearly* enough information for someone to get this up and running. Assuming a user's environment is essentially identical to yours as a precondition is... not great.
 
 # LaunchDarkly setup
 
@@ -15,6 +16,7 @@ Example using pip and venv virtual environment on Windows:
 
 ## Feature Flags
 1. Create two feature flags named 'missile' and 'worldDomination' (or modify main.py per your liking)
+> "create a flag" isn't enough for me to get this working properly. How many variations? What kind of flag?
 2. 'worldDomination' flag is used for showing the ability to trigger a feature on/off remotely  
     a. Create trigger per https://docsps.launchdarkly.com/home/releases/triggers  
     b. Use curl to post to trigger specific on/off url with empty body `curl -X POST "https://app.launchdarkly.com/webhook/triggers/1234567890"`  
