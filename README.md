@@ -1,21 +1,21 @@
-# banking-ld
+# Getting Started
 
-# Clone project
+## Clone project
 Navigate to the directory where this application will live and run the following:
 `git clone https://github.com/drewkhorasani/banking-ld.git`
 
-# Install Python 3
+## Install Python 3
 Windows: https://www.geeksforgeeks.org/how-to-install-python-on-windows/  
 Linux: https://www.geeksforgeeks.org/how-to-install-python-on-linux/  
 Mac: https://www.geeksforgeeks.org/how-to-install-python-on-mac/  
 
-# Python Package Manager
+## Python Package Manager
 Ensure python's package manager `pip` is installed by running:  
 `python get-pip.py` on Linux/Mac  
 or  
 `py get-pip.py` on Windows  
   
-# Install Python Dependencies
+## Install Python Dependencies
 
 We must install the python dependencies defined in `requirements.txt`. Navigate to the root of the project and run the following:  
 `pip install -r requirements.txt`  
