@@ -1,20 +1,30 @@
 # banking-ld
 
+# Clone project
+Navigate to the directory where this application will live and run the following:
+`git clone https://github.com/drewkhorasani/banking-ld.git`
+
+# Install Python 3
+Windows: https://www.geeksforgeeks.org/how-to-install-python-on-windows/  
+Linux: https://www.geeksforgeeks.org/how-to-install-python-on-linux/  
+Mac: https://www.geeksforgeeks.org/how-to-install-python-on-mac/  
+
+# Python Package Manager
+Ensure python's package manager `pip` is installed by running:  
+`python get-pip.py` on Linux/Mac  
+or  
+`py get-pip.py` on Windows  
+  
 # Install Python Dependencies
 
-This has been tested with `python 3.13` in a Windows venv. However, instructions for running are similar in other OS as long as the python version matches.
-
-We must install the python dependencies defined in `requirements.txt`
-
-Example using pip and venv virtual environment on Windows:  
-`.venv/Scripts/activate`  
+We must install the python dependencies defined in `requirements.txt`. Navigate to the root of the project and run the following:  
 `pip install -r requirements.txt`  
 
 # LaunchDarkly setup
 
 ## SDK key
-1. Create SDK Key as explained here: https://docs.launchdarkly.com/home/account/environment/settings#copy-sdk-credentials-for-an-environment
-2. Set SDK key variable towards top of `main.py` or use environment variable LDKEY and uncomment line 10.
+1. Copy SDK Key in production environment as explained here: https://docs.launchdarkly.com/home/account/environment/settings#copy-sdk-credentials-for-an-environment
+2. Set SDK key variable towards top of `main.py` in root of project directory
 
 ## Feature Flags
 
@@ -30,15 +40,15 @@ Enter 'missile' as the Name.
 (Optional) Update the flag Key. You’ll use this key to reference the flag in your code.  
 
 2. Choose the 'custom' type and mimic the following settings:  
-    -Temporary=yes  
-    -Flag Type=Boolean  
-    -Variation with Value=true:  
-        -Name=Enabled  
-    -Variation with Value=false:  
-        -Name=Disabled  
-    -Default variations  
-        -Serve when targeting is ON=false  
-        -Serve when targeting is OFF=false  
+    * Temporary=yes  
+    * Flag Type=Boolean  
+    * Variation with Value=true:  
+      ** Name=Enabled  
+    * Variation with Value=false:  
+      ** Name=Disabled  
+    * Default variations  
+      ** Serve when targeting is ON=false  
+      ** Serve when targeting is OFF=false  
 
 3. Click Create Flag. This flag will be used for individual and rule based targeting which allows us to choose how different features are served. On the flag screen, be sure the 'Production' environment is selected towards the top.  
 
@@ -80,15 +90,15 @@ Enter 'worldDomination' as the Name.
 (Optional) Update the flag Key. You’ll use this key to reference the flag in your code.  
 
 2. Choose the 'custom' type and mimic the following settings:  
-    -Temporary=yes  
-    -Flag Type=Boolean  
-    -Variation with Value=true:  
-        -Name=Enabled  
-    -Variation with Value=false:  
-        -Name=Disabled  
-    -Default variations  
-        -Serve when targeting is ON=true  
-        -Serve when targeting is OFF=false  
+    * Temporary=yes  
+    * Flag Type=Boolean  
+    * Variation with Value=true:  
+        ** Name=Enabled  
+    * Variation with Value=false:  
+        * Name=Disabled  
+    * Default variations  
+        * Serve when targeting is ON=true  
+        * Serve when targeting is OFF=false  
 
 3. Click Create Flag. This flag will simply be an 'On'/'Off' switch for being able to log into the application.
 
